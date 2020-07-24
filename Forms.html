@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<body> 
+<title>GATE Forum</title>
+<center>
+<h1>Registration Form</h1>
+</center>
+<script>  
+function validateform()
+{  
+var fullname=document.myform.field1.value;    
+if (fullname==null || fullname=="")
+{  
+  alert("Please fill Name field");  
+  return false;  
+} 
+var idno=document.myform.field2.value;
+if(isNaN(idno)){
+	alert("Please enter valid id");
+	return false;} 
+else if(idno==null || idno=="")
+{  
+  alert("Please fill ID field");  
+  return false;  
+} 
+var phone=document.myform.field4.value;
+if(isNaN(phone)){
+	alert("Please fill Phone number field");
+	return false; } 
+else if(phone.length!=10)
+{  
+  alert("Please enter valid Phone number");  
+  return false;  
+}
+var gmail=document.myform.field3.value;
+if (gmail==null || gmail=="")
+{  
+  alert("Please fill gmail field");  
+  return false;  
+} 
+var rem=document.myform.field6.value;
+if (rem==null || rem=="")
+{  
+  alert("Remarks field can't be empty");  
+  return false;  
+}
+else if(rem.length>50)
+{
+  alert("Remarks field maximum limit is 50");  
+  return false; 
+}
+
+}  
+</script> 
+<div class="form-style-3" style="max-width:500px;margin:auto;">
+
+<form name="myform" method="post" action="ab.html"onsubmit="return validateform()" >
+<fieldset><legend>Register Details</legend>
+<label for="field1"><span>FullName<span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
+<label for="field2"><span>Id no<span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
+<label for="field3"><span>gmail<span class="required">*</span></span><input type="email" class="input-field" name="field3" value="" /></label>
+<label for="field4"><span>Phone Number <span class="required">*</span></span><input type="text" class="input-field" name="field4" value="" /></label>
+<label for="field5"><span>Department</span><select name="field5" class="select-field">
+<option value="CSE">Computer Science</option>
+<option value="ECE">Electronics and Communication</option>
+<option value="EEE">Electrical and Elecronics</option>
+<option value="Civil">Civil Engineering</option>
+</select></label>
+</fieldset>
+<fieldset><legend>Remarks</legend>
+<label for="field6"><span>Remarks <span class="required">*</span></span><textarea name="field6" class="textarea-field"></textarea></label>
+<label><center><span> </span><input type="submit" value="Sign Up" /></center></label>
+</fieldset>
+</form>
+
+</div>
+<style type="text/css">
+.form-style-3{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style-3 label > span{
+	float: left;
+	width: 100px;
+	color: #000000;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #0B0101;
+	padding: 20px;
+	background: #FFF0F5;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+	color: #FFC0CE;
+	border-top: 2px solid #6833FF;
+	border-left: 2px solid #6833FF;
+	border-right: 2px solid #6833FF;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	background: #000000;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+	font-weight: normal;
+	font-size: 12px;
+}
+.form-style-3 textarea{
+	width:250px;
+	height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #DB7093;
+	outline: none;
+	color: #111111;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #FFD5E7;
+	-moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+	-webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+	background: #FFFFF0;
+	width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: #E1E713;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #F515D6;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+}
+.required{
+	color:black;
+	font-weight:normal;
+}
+</style>
+</body>
+</html>
+
